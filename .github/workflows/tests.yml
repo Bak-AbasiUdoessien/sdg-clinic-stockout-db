@@ -1,0 +1,21 @@
+# GitHub Actions: run the unit tests automatically on every push and pull request.
+name: tests                                  # shown on the Actions tab and in the README badge
+
+on:                                          # when to run
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest                   # a fresh Linux machine provided by GitHub
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]     # check the code works on an older and a newer Python
+    steps:
+      - uses: actions/checkout@v4            # download this repo onto the machine
+      - uses: actions/setup-python@v5        # install the Python version from the matrix
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        run: python -m unittest discover tests -v   # same command as in the README; -v lists each test

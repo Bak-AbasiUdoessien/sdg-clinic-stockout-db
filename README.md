@@ -1,5 +1,7 @@
 # Clinic Stock-Out Database (SDG 3: Good Health)
 
+[![tests](https://github.com/Bak-AbasiUdoessien/sdg-clinic-stockout-db/actions/workflows/tests.yml/badge.svg)](https://github.com/Bak-AbasiUdoessien/sdg-clinic-stockout-db/actions/workflows/tests.yml)
+
 When a clinic runs out of ORS, zinc or antimalarials, children die of diseases we already know how to treat. This SQLite database tracks essential medicines across clinics and answers four questions: **who is out, who will run out within 14 days, what to reorder, and which nearby clinic could share stock today.**
 
 **SDG targets covered:** 3.8 (access to essential medicines), together with 3.2 (child deaths) and 3.3 (malaria).
